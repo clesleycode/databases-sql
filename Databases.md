@@ -6,13 +6,30 @@ Brought to you by [Lesley Cordero](http://www.columbia.edu/~lc2958).
 ## Table of Contents
 
 - [0.0 Setup](#00-setup)
-	+ [0.1 R and R Studio](#01-r-and-r-studio)
-	+ [0.2 Packages](#02-packages)
+	+ [0.1 Python and Pip](#01-python-and-pip)
+	+ [0.2 Modules](#02-modules)
 - [1.0 Background](#10-background)
-
-- [7.0 Final Words](#60-final-words)
-	+ [7.1 Resources](#61-resources)
-	+ [7.2 More!](#72-more)
+	+ [1.1 What is a database?](#11-what-is-a-database)
+		* [1.1.1 What is a relational database?](#111-what-is-a-relational-database)
+		* [1.1.2 What is a table?](#112-what-is-a-table)
+	+ [1.2 What is a clause?](#12-what-is-a-clause)
+	+ [1.3 What is a schema?](#13-what-is-a-schema)
+- [2.0 SQL](#20-sql)
+	+ [2.1 What is SQL?](#21-what-is-sql)
+	+ [2.2 Building a Database](#22-building-a-database)
+	+ [2.3 Inserting](#23-inserting)
+	+ [2.4 Selecting](#24-selecting)
+	+ [2.5 Updating](#25-updating)
+	+ [2.6 Deleting](#26-deleting)
+	+ [2.7 Null](#27-null)
+	+ [2.8 Aggregations](#28-aggregations)(#28-aggregations)
+	+ [2.9 Subqueries](#29-subqueries)
+		* [2.9.1 2D Tables](#291-2d-tables)
+		* [2.9.2 1D Arrays](#292-1d-arrays)
+		* [2.9.3 Single Values](#293-single-values)
+- [5.0 Final Words](#50-final-words)
+	+ [5.1 Resources](#51-resources)
+	+ [5.2 More!](#52-more)
 
 
 ## 0.0 Setup
@@ -26,13 +43,9 @@ Download [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.
 
 ### 0.2 Modules
 
-
 ```
+pip3 install sqllite3
 ```
-
-### 0.3 Other 
-
-Follow [these](https://www.dataquest.io/blog/pyspark-installation-guide/) instructions for PySpark setup! 
 
 ## 1.0 Background
 
@@ -54,12 +67,13 @@ Clauses perform specific tasks in SQL. By convention, clauses are written in cap
 ### 1.3 What is a schema?
 
 
-## SQL
-
-What is SQL? 
+## 2.0 SQL
 
 
-### Building a Database
+### 2.1 What is SQL? 
+
+
+### 2.2 Building a Database
 
 The structure of SQL statements vary. The number of lines used do not matter. A statement can be written all on one line, or split up across multiple lines if it makes it easier to read. In this course, you will become familiar with the structure of common statements.
 
@@ -71,7 +85,7 @@ CREATE TABLE table_name (
   );
 ```
 
-### Inserting
+### 2.3 Inserting
 
 `INSERT INTO` is a clause that adds the specified row or rows. 
 
@@ -79,7 +93,7 @@ CREATE TABLE table_name (
 INSERT INTO table (id, name, age) VALUES (1, 'Lesley Cordero', 25);
 ```
 
-### Selecting
+### 2.4 Selecting
 
 ``` SQL
 SELECT * FROM celebs;
@@ -88,36 +102,35 @@ SELECT * FROM celebs;
 
 `*` is a special wildcard character that we have been using. It allows you to select every column in a table without having to name each one individually. Here, the result set contains every column in the celebs table.
 
-### Updating
+### 2.5 Updating
 
 The `UPDATE` statement edits a row in the table. You can use the UPDATE statement when you want to change existing records. `SET` is a clause that indicates the column to edit. WHERE is a clause that indicates which row(s) to update with the new column value.
 
 The `ALTER TABLE` statement added a new column to the table. You can use this command when you want to add columns to a table. `ADD COLUMN` is a clause that lets you add a new column to a table. 
 
-### Deleting
+### 2.6 Deleting
 
 The `DELETE` FROM statement deletes one or more rows from a table. You can use the statement when you want to delete existing records.
 
-###
+### 2.7 Null
 
 `NULL` is a special value in SQL that represents missing or unknown data. Here, the rows that existed before the column was added have NULL values for twitter_handle
 
-### Aggregations
+### 2.8 Aggregations
 
 Aggregations are used to convert many rows into a single row. Almost all aggregations come with the `GROUP BY` statement, which converts the table otherwise returned by the query into groups of tables. Each group corresponds to a unique value (or group of values) of columns which we specify in the GROUP BY statement.
 
 
-
-### Subqueries 
+### 2.9 Subqueries 
 
 Subqueries are regular SQL queries that are embedded inside larger queries. There are 3 different types of subqueries, based on what they return -
 
 
-#### 2D Table 
+#### 2.9.1 2D Table 
 
-#### 1D Array
+#### 2.9.2 1D Array
 
-#### Single Values
+#### 2.9.3 Single Values
 
 
 ## 5.0 Final Words
